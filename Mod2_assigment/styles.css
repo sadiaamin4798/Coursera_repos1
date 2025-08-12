@@ -1,0 +1,96 @@
+ * {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.row {
+  width: 100%;
+  /* content: " ";
+  display: table;
+  clear: both; */
+}
+
+.menu-item {
+  position: relative;
+  border: 1px solid black;
+  background-color: #f0f0f0;
+  padding: 40px 15px 15px; /* Top padding leaves space for title box */
+  margin-bottom: 20px;
+}
+
+.menu-title {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 5px 15px;
+  border: 1px solid black;
+  font-weight: bold;
+  color: white;
+}
+
+.chicken .menu-title {
+  background-color: #c97b7b;
+}
+
+.beef .menu-title {
+  background-color: #8b0000;
+}
+
+.sushi .menu-title {
+  background-color: #c2a836;
+}
+
+/* Desktop view (>= 992px) */
+@media (min-width: 992px) {
+  .menu-item {
+    float: left;
+    width: 32%;
+    margin-right: 2%;
+    margin-bottom: 0;
+  }
+
+  .menu-item:nth-child(3) {
+    margin-right: 0;
+  }
+}
+
+/* Tablet view (768px to 991px) */
+@media (min-width: 768px) and (max-width: 991px) {
+  .menu-item {
+    float: left;
+    width: 48%;
+    margin-bottom: 20px;
+  }
+
+  .menu-item:nth-child(1){
+     margin-right: 4%;
+  }
+  .menu-item:nth-child(2) {
+    margin-right: 0;
+  }
+
+  .menu-item:nth-child(3) {
+    width: 100%;
+    clear: both;
+    margin-right: 0;
+  }
+}
+
+/* Mobile view (<= 767px) */
+@media (max-width: 767px) {
+  .menu-item {
+    float: none;
+    width: 100%;
+    margin-right: 0;
+  }
+}
